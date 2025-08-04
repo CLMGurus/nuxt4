@@ -12,7 +12,7 @@
   "dependencies": {
     "chart.js": "^4.5.0",
     "jsonwebtoken": "^9.0.2",
-    "nuxt": "^3.18.0",
+    "nuxt": "^3.17.2",
     "nuxt-tiptap-editor": "^2.3.1",
     "pinia-plugin-persistedstate": "^4.4.1",
     "serve-static": "^2.2.0",

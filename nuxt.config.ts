@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
+  ssr: true,
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   modules: [
@@ -18,7 +19,15 @@ export default defineNuxtConfig({
       "/ohif/**": { static: true },
     },
   },
-
+  supabase: {
+    redirectOptions: {
+      login: "/auth/login",
+      callback: "/confirm",
+      include: undefined,
+      exclude: ["/auth/*", "/ohif/*"],
+      saveRedirectToCookie: false,
+    },
+  },
   vuetify: {
     moduleOptions: {},
     vuetifyOptions: {
@@ -40,11 +49,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  // devServer: {
-  //   https: true,
-  //   host: "0.0.0.0",
-  //   port: 3000,
-  // },
   runtimeConfig: {
     public: {
       supabaseUrl: "",

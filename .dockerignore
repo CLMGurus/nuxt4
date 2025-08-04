@@ -3,7 +3,5 @@
 /.output
 /node_modules
 
-certs
-
 .gitignore
 README.md
